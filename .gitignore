@@ -20,7 +20,18 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
+src/**/output/
+src/**/data/
+output/
+src/02wandb/artifacts/
+src/02wandb/wandb/
+src/02wandb/output/
 develop-eggs/
+*/.ipynb_checkpoints/
+*/artifacts/
+*/output/
+*/wandb/
+data/
 dist/
 downloads/
 eggs/

@@ -1,0 +1,50 @@
+###
+### A complete description of a Prefect Deployment for flow 'main-flow'
+###
+name: main_flow
+description: The main training pipeline
+version: c3c36c650b804a6cf9e33a8e33c825a7
+# The work queue that will handle this deployment's runs
+work_queue_name: dev
+work_pool_name: null
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: main-flow
+manifest_path: null
+storage: null
+path: /home/ubuntu/src/sp-mlops
+entrypoint: src/03-orchestration/orchestrate.py:main_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    train_path:
+      title: train_path
+      default: /home/ubuntu/src/sp-mlops/data/green/green_tripdata_2022-01.parquet
+      position: 0
+      type: string
+    val_path:
+      title: val_path
+      default: /home/ubuntu/src/sp-mlops/data/green/green_tripdata_2022-02.parquet
+      position: 1
+      type: string
+  required: null
+  definitions: null
+timestamp: '2023-06-05T18:57:29.386366+00:00'
